@@ -27,7 +27,7 @@ const Login = () => {
       >
         <Typography variant="h3">Hello</Typography>
         <Typography variant="body2" gutterBottom>
-          Sign in to eBay or create an account.
+          Sign in to ElcPs or create an account.
         </Typography>
         <LoginForm></LoginForm>
         <Divider variant="fullWidth" />
