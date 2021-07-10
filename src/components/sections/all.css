@@ -1,0 +1,20 @@
+.posts{
+    margin-top: 70px;
+    background-color: #1b1c19;
+}
+.loading{
+    height: 657px;
+    background-color: #1b1c19;
+    text-align: center;
+}
+.animation{
+    margin-top: -110px;
+    margin-left: -20px;
+    width: 1200px;
+    animation: logo 20s infinite;
+}
+
+@keyframes logo {
+  from {transform: rotate(0deg); transform-origin: 50% 50%;}
+  to {transform: rotate(1440deg); transform-origin: 50% 50%;}
+}
