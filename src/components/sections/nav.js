@@ -2,6 +2,7 @@ import {Link} from 'react-router-dom';
 import './nav.css'
 import { Grid   , makeStyles , Typography  , AppBar , Toolbar , Button } from '@material-ui/core'
 import logo from '../../assets/logo.png'
+import user from '../../assets/user.png'
 import Tooltip from '@material-ui/core/Tooltip';
 
 function Nav() {
@@ -21,7 +22,7 @@ function Nav() {
 
        li : {
         display: 'inline-block' , 
-        color : 'white' , 
+        color : 'white', 
         padding :'20px' , 
         'font-size': '17px' ,
         fontFamily: 'Segoe UI',
@@ -31,11 +32,21 @@ function Nav() {
       textDecoration: 'none',
       position: 'absolute',
       marginTop: '-50px',
-      marginLeft: '920px',
+      marginLeft: '840px',
       padding: '10px',
       borderRadius: '10px',
-      backgroundColor: '#fcd462',
-      color: '#333333'  
+      backgroundColor: '#252525',
+      color: '#fcd462',
+      fontWeight: '500',
+      borderBottom: '1px solid #fcd462',
+    },
+    user : {
+      width: '40px',
+      position: 'absolute',
+      marginTop: '10px',
+      marginLeft: '230px',
+      border: '2px solid #fcd462',
+      borderRadius: '50%'
     },
     
 })
@@ -54,11 +65,6 @@ const classes = useStyles()
          marginTop: '-40px',
          marginLeft: '-240px'
          }}/>
-         <Tooltip>
-       <Link to ='/'>
-            <li className = {classes.li}>
-            Login</li>
-        </Link></Tooltip>
 
         <Tooltip>
         <Link to ='/all'>
@@ -103,8 +109,10 @@ const classes = useStyles()
         </Link></Tooltip>
         <Link to ='/ubload'>
             <p className = {classes.upload}>
-            + Ubload Your Product</p>
+            + Upload Your Product</p>
         </Link>
+
+        <img src={user} className={classes.user}/>
        </ul>
    </nav>
 

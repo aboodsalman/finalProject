@@ -1,27 +1,6 @@
 // import React, { useState, Component } from "react";
 // import db from "../firebase";
 
-// const imgSubmit = (e) => {
-//   const [img, setImg] = useState([]);
-//   e.preventDefault();
-//   db.collection("imgs").doc()
-//     .set({
-//       img: img,
-//     })
-//     .then(function (docRef) {
-//       console.log("Document written with ID: ", docRef.id);
-//       setImg('');
-//     })
-//     .catch(function (error) {
-//       console.error("Error adding document: ", error);
-//     });
-//   alert("Thanks for posting on Ebay!");
-//   db.collection("imgs").doc().delete().then(() => {
-//     console.log("Document successfully deleted!");
-// }).catch((error) => {
-//     console.error("Error removing document: ", error);
-// });
-// };
 
 // class DisplayImage extends Component {
 //   constructor(props) {
@@ -41,7 +20,29 @@
 //       });
 //     }
 //   };
-  
+
+//   const imgSubmit = (e) => {
+//     const [img, setImg] = useState([]);
+//     e.preventDefault();
+//     db.collection("imgs").doc()
+//       .set({
+//         img: img,
+//       })
+//       .then(function (docRef) {
+//         console.log("Document written with ID: ", docRef.id);
+//         setImg('');
+//       })
+//       .catch(function (error) {
+//         console.error("Error adding document: ", error);
+//       });
+//     alert("Thanks for posting on Ebay!");
+//     db.collection("imgs").doc().delete().then(() => {
+//       console.log("Document successfully deleted!");
+//   }).catch((error) => {
+//       console.error("Error removing document: ", error);
+//   });
+//   };
+
 //   render() {
 //     return (
 //       <div>

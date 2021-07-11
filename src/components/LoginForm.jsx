@@ -12,10 +12,11 @@ const useStyles = makeStyles((theme) => ({
   input: {
     width: "30%",
     'margin-top' : '15px',
-    'background-color' : '#1c1b19',
+    'background-color' : '#252525',
     borderWidth: "1px",
-    borderColor: "#fcd462",
-    color: 'white',
+    borderWidth: '0px',
+    borderBottom: '1px solid #fcd462',
+    color: '#fcd462',
     fontSize : '18px',
     'border-radius' : '10px',
     padding : '20px'

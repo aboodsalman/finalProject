@@ -11,10 +11,10 @@ const useStyles = makeStyles((theme) => ({
   input: {
     width: "30%",
     'margin-top' : '15px',
-    'background-color' : '#1c1b19',
-    borderWidth: "1px",
-    borderColor: "#fcd462",
-    color: 'white',
+    'background-color' : '#252525',
+    borderWidth: '0px',
+    borderBottom: '1px solid #fcd462',
+    color: '#fcd462',
     fontSize : '18px',
     'border-radius' : '10px',
     padding : '20px'
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   name: {
     display: 'flex',
     flexDirection : 'row',
-    marginLeft: '100px',
+    marginLeft: '165px',
     marginTop: '-120px'
   },
   button: {
@@ -99,7 +99,7 @@ const SignupForm = () => {
       placeholder="Last Name"
       value={lastname}
       className={classes.input}
-      style={{ marginLeft: '35px', }}
+      style={{ marginLeft: '60px', }}
       onChange={(event) => {
         SetLastname(event.target.value);
       }}></input></div>
