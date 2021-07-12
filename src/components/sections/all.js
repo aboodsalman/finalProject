@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import db from "../../firebase";
 import logo2 from "../../assets/logo2.png"
 import location from "../../assets/location.png"
+import phone from "../../assets/phone-call.png"
 import ReactCircleModal from 'react-circle-modal'
 import './all.css'
 import Favorite from '@material-ui/icons/Favorite';
@@ -31,7 +32,9 @@ const Shop = () => {
       marginTop: '50px',
       marginLeft: '10px',
       marginRight: '10px',
-      borderRadius: '15px'
+      borderRadius: '15px',
+      color: 'white',
+      fontSize: '20px'
     },
     prPage: {
       display: 'flex',
@@ -43,15 +46,29 @@ const Shop = () => {
     },
     price: {
       color: '#fcd462',
-      fontSize: '20px',
-      fontWeight: '500',
-      marginTop: '0px',
+      fontSize: '25px',
+      fontWeight: '700',
+      marginTop: '30px',
+      marginLeft: '300px'
     },
     imgPage:{
       width: '380px',
       height: '305px',
       objectFit: 'cover',
       borderRadius: '8px',
+    },
+    postPage:{
+      marginLeft: '50px',
+      marginTop: '-20px'
+    },
+    click: {
+      position: 'absolute',
+      marginTop: '-360px',
+      marginLeft: '755px',
+      border: '0px',
+      backgroundColor: '#1b1c19',
+      color: '#fcd462',
+      fontSize: '40px'
     }
   }));
 
@@ -107,7 +124,7 @@ const Shop = () => {
         style={{ color: "#fcd462", marginLeft: "3px", marginTop: "-10px" }}/>}
       />
             <ReactCircleModal
-      backgroundColor="#fcd462"
+      backgroundColor="#fcd36296"
       toogleComponent={onClick => (
         <button onClick={onClick}
         className={classes.favorite}>
@@ -128,18 +145,28 @@ const Shop = () => {
               width="400"
               className= {classes.imgPage}
             />
-            <div>
+
+            <div className={classes.postPage}>
+
+            <div className={classes.priceRow}>
             <h2>{post.productname}</h2>
+            <h3 className= {classes.price}> $ {post.price}</h3>
+            </div>
+
           <p>{post.description}</p>
-          <div className={classes.priceRow}>
+
             <div className="address">
               <img src={location} className="location"/>
               <p>{post.address}</p>
               </div>
-              <h3 className= {classes.price}> $ {post.price}</h3>
+
+              <div className="address">
+              <img src={phone} className="phone"/>
+              <p>{post.phone}</p>
               </div>
-          <button onClick={onClick}>
-            Click here to close modal
+
+          <button onClick={onClick} className={classes.click}>
+            ×
           </button></div>
         </div></div>
       )}
