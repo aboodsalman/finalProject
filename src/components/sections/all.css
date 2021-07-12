@@ -46,6 +46,8 @@
 .product:hover{
     background-color: #151515;
     transform: scale(1.03);
+    box-shadow: 3px 3px 20px #fcd362be;
+
 }
 .product h2{
     color: white;
@@ -58,12 +60,12 @@
 }
 .address p{
     margin-top: 5px;
-    margin-left: 8px;
+    margin-left: 15px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
 }
-.location{
+.location, .phone{
     width: 25px;
     height: 25px;
 }
