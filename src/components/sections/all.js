@@ -6,11 +6,8 @@ import location from "../../assets/location.png"
 import phone from "../../assets/phone-call.png"
 import ReactCircleModal from 'react-circle-modal'
 import './all.css'
-import Favorite from '@material-ui/icons/Favorite';
-import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import { makeStyles } from "@material-ui/core/styles";
+import { Button } from '@material-ui/core';
+
 
 const Shop = () => {
 
@@ -95,6 +92,7 @@ const Shop = () => {
   if (loading) {
     return <div className="loading"><img src={logo2} className="animation"/></div>;
   }
+
   return (
     <div className="posts">
       <Nav/>
@@ -172,6 +170,7 @@ const Shop = () => {
       )}
     </ReactCircleModal>
           </div>
+          </div>         
         ))
       ) : (
         <h1>No posts yet:(</h1>
