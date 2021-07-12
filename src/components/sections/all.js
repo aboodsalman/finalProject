@@ -4,6 +4,7 @@ import db from "../../firebase";
 import logo2 from "../../assets/logo2.png"
 import location from "../../assets/location.png"
 import './all.css'
+import { Button } from '@material-ui/core';
 
 
 const Shop = () => {
@@ -29,6 +30,7 @@ const Shop = () => {
   if (loading) {
     return <div className="loading"><img src={logo2} className="animation"/></div>;
   }
+
   return (
     <div className="posts">
       <Nav/>
@@ -53,7 +55,7 @@ const Shop = () => {
               <h3> $ {post.price}</h3>
               </div>
             {/* <p>{post.phone}</p> */}
-          </div>
+          </div>         
         ))
       ) : (
         <h1>No posts yet:(</h1>
